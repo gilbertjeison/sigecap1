@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "177964961809",
+    "firebase_url": "https://sigecap-761f0.firebaseio.com",
+    "project_id": "sigecap-761f0",
+    "storage_bucket": "sigecap-761f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177964961809:android:e112c5f6e142483a",
+        "android_client_info": {
+          "package_name": "com.develop.perlasoft.sigecap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177964961809-c90p7oijv6jhhp7ks2j43hiitu7dmebp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.develop.perlasoft.sigecap",
+            "certificate_hash": "69169f7d2c516f9f0b4a7ec146c9d63ef3ab77f7"
+          }
+        },
+        {
+          "client_id": "177964961809-dtthmujaba02usnnjgkgbi8oi04dsd02.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIKYjSsZOnVdQOTpFqqh5MsefvllbH0Xw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177964961809-dtthmujaba02usnnjgkgbi8oi04dsd02.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

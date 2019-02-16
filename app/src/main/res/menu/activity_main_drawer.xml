@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"  >
+        <item
+            android:id="@+id/nav_capacitaciones"
+            android:icon="@drawable/ic_capacitaciones"
+            android:title="Capacitaciones"/>
+        <item
+            android:title="Información básica" >
+            <menu >
+                <item
+                    android:id="@+id/nav_inst"
+                    android:icon="@drawable/ic_menu_users"
+                    android:title="Instructores" />
+                <item
+                    android:id="@+id/nav_asist"
+                    android:icon="@drawable/ic_asistentes"
+                    android:title="Asistentes" />
+                <item
+                    android:id="@+id/nav_cargos"
+                    android:icon="@drawable/ic_cargos"
+                    android:title="Cargos" />
+                <item
+                    android:id="@+id/nav_sitios"
+                    android:icon="@drawable/ic_sitios"
+                    android:title="Sitios de capacitación" />
+                <item
+                    android:id="@+id/nav_areas"
+                    android:icon="@drawable/ic_areas"
+                    android:title="Áreas" />
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/nav_hist"
+            android:icon="@drawable/ic_historico"
+            android:title="Histórico" />
+
+        <item android:title="Dispositivo">
+            <menu>
+                <item
+                    android:id="@+id/nav_settings"
+                    android:icon="@drawable/ic_menu_manage"
+                    android:title="Ajustes" />
+                <item
+                    android:id="@+id/nav_cerrar_sesion"
+                    android:icon="@drawable/ic_logout"
+                    android:title="Cerrar sesión" />
+            </menu>
+        </item>
+    </group>
+
+</menu>

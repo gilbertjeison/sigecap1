@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    tools:context=".AddAsistenteFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:weightSum="10"
+    android:orientation="vertical">
+
+
+    <com.beardedhen.androidbootstrap.BootstrapWell
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_weight="2.5">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Nombres"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:layout_weight="3"/>
+
+                    <com.beardedhen.androidbootstrap.BootstrapEditText
+                        android:id="@+id/txtNombres"
+                        android:layout_width="0dp"
+                        android:inputType="textPersonName"
+                        android:layout_height="35dp"
+                        app:bootstrapBrand="info"
+                        app:roundedCorners="true"
+                        app:bootstrapSize="lg"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="7"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_weight="2.5">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Cédula"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:layout_weight="3"/>
+
+                    <com.beardedhen.androidbootstrap.BootstrapEditText
+                        android:id="@+id/txtCc"
+                        android:layout_width="0dp"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:layout_height="35dp"
+                        app:bootstrapBrand="info"
+                        app:roundedCorners="true"
+                        app:bootstrapSize="lg"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="7"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_weight="2.5">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Área"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:layout_weight="3"/>
+
+                    <Spinner
+                        android:id="@+id/spAreas"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="7"
+                        android:spinnerMode="dialog">
+                    </Spinner>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+                    android:layout_weight="2.5">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="Cargo"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:layout_weight="3"/>
+
+                    <Spinner
+                        android:id="@+id/spCargos"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="7"
+                        android:spinnerMode="dialog">
+                    </Spinner>
+                </LinearLayout>
+        </LinearLayout>
+
+    </com.beardedhen.androidbootstrap.BootstrapWell>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:layout_gravity="center"
+        android:textSize="28sp" />
+
+    <com.beardedhen.androidbootstrap.BootstrapWell
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btnhuella"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                app:bootstrapText="Capturar huella  {fa_hand_o_up}"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:showOutline="true"
+                app:roundedCorners="true">
+            </com.beardedhen.androidbootstrap.BootstrapButton>
+
+            <TextView
+                android:id="@+id/txtMessage"
+                android:text="..."
+                android:layout_margin="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textStyle="italic"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/imgHuella"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7"
+                android:src="@drawable/fingerprint3"/>
+
+
+        </LinearLayout>
+
+    </com.beardedhen.androidbootstrap.BootstrapWell>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:layout_gravity="center"
+        android:textSize="28sp" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/btnGuadar"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        app:bootstrapText="Guardar información {fa_floppy_o}"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="false"
+        app:roundedCorners="true">
+    </com.beardedhen.androidbootstrap.BootstrapButton>
+</LinearLayout>
+
+
+
+</ScrollView>

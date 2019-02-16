@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        app:title="Información de usuario"
+        app:key="user_category">
+        <Preference
+            app:key="user_logged"
+            app:icon="@drawable/ic_user"
+            app:title="Usuario logueado"
+            app:summary="Usuario registrado en el sistema..."/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="Sincronización de datos"
+        app:key="sync_category">
+        <Preference
+            app:key="feedback"
+            app:icon="@drawable/ic_sync_black_24dp"
+            app:title="Sincronizar al abrir"
+            app:summary="Cada vez que se inicie sesión, se sincronozará automáticamente"/>
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

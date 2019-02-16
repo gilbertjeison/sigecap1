@@ -48,7 +48,7 @@ public class CapacitacionesFragment extends Fragment{
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(CapacitacionesViewModel.class);
         // TODO: Use the ViewModel
-
+        this.fabAddCap.getButtonSize();
     }
 
     @OnClick(R.id.fab_add_cap)

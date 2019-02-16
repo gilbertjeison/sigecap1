@@ -3,6 +3,7 @@ package com.develop.perlasoft.repository;
 import com.develop.perlasoft.database.SigecapDB;
 import com.develop.perlasoft.entities.Capacitaciones;
 import com.develop.perlasoft.entities.CapacitacionesCargos;
+import com.develop.perlasoft.model.CapacitacionesData;
 
 import java.util.List;
 
@@ -29,6 +30,11 @@ public class CapacitacionesRepository {
         return sInstance;
     }
 
+    public Observable<List<CapacitacionesData>> getCapacitaciones()
+    {
+        return sigecapDB.getCapacitacionesDao().getCapacitaciones();
+    }
+
     public Completable InsertCapacitacion(Capacitaciones capacitaciones)
     {
         return Completable.fromAction(() ->{
@@ -38,9 +44,7 @@ public class CapacitacionesRepository {
 
     public Single<Long> InsertCapacitacionObs(Capacitaciones capacitaciones)
     {
-
          return sigecapDB.getCapacitacionesDao().insertCapacitacion(capacitaciones);
-
     }
 
     public Completable InsertAllCapCar(List<CapacitacionesCargos> capcar)

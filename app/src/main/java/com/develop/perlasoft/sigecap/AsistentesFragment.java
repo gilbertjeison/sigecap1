@@ -62,7 +62,6 @@ import java.util.List;
 public class AsistentesFragment extends Fragment implements View.OnClickListener, AsistentesListAdapter.AsistentesAdapterOnLongPressHandler {
 
     Unbinder unbinder;
-    private TiposDataViewModel mViewModel;
     private static AsistentesViewModel mAsViewModel;
     public static final CompositeDisposable mDisposable = new CompositeDisposable();
     private static final int READ_REQUEST_CODE = 42;
@@ -114,10 +113,8 @@ public class AsistentesFragment extends Fragment implements View.OnClickListener
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(TiposDataViewModel.class);
         mAsViewModel = ViewModelProviders.of(this).get(AsistentesViewModel.class);
 
-        // TODO: Use the ViewModel
         //LLENAR LA LISTA DE ASISTENTES
         listAs = new ArrayList<>();
         listAdapter = new AsistentesListAdapter(getActivity(),listAs,this);

@@ -5,6 +5,7 @@ import android.app.Application;
 import com.develop.perlasoft.application.SigecapApplication;
 import com.develop.perlasoft.entities.Capacitaciones;
 import com.develop.perlasoft.entities.CapacitacionesCargos;
+import com.develop.perlasoft.model.CapacitacionesData;
 import com.develop.perlasoft.repository.CapacitacionesRepository;
 
 import java.util.List;
@@ -28,6 +29,10 @@ public class CapacitacionesViewModel extends AndroidViewModel {
 
     public Single<Long> saveCapacitacion(Capacitaciones capacitaciones){
         return mRepository.InsertCapacitacionObs(capacitaciones);
+    }
+
+    public Observable<List<CapacitacionesData>> getCapacitaciones(){
+        return mRepository.getCapacitaciones();
     }
 
     public Completable insertAllCapCar(List<CapacitacionesCargos> capcar){

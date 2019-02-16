@@ -23,7 +23,7 @@ public class CapacitacionesAdapter extends RecyclerView.Adapter<CapacitacionesAd
     private List<CapacitacionesData> list;
     private final OnPressHandler longPressHandler;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener
     {
 
         @BindView(R.id.txtNameItem)
@@ -44,16 +44,14 @@ public class CapacitacionesAdapter extends RecyclerView.Adapter<CapacitacionesAd
             ButterKnife.bind(this,view);
 
 
-            view.setOnLongClickListener(this);
+            view.setOnClickListener(this);
         }
 
         @Override
-        public boolean onLongClick(View view) {
+        public void onClick(View view) {
             int position = getAdapterPosition();
             CapacitacionesData cD = list.get(position);
-            longPressHandler.onLongPress(cD);
-
-            return true;
+            longPressHandler.onPress(cD);
         }
     }
 
@@ -64,7 +62,7 @@ public class CapacitacionesAdapter extends RecyclerView.Adapter<CapacitacionesAd
     }
 
     public interface OnPressHandler{
-        void onLongPress(CapacitacionesData cD);
+        void onPress(CapacitacionesData cD);
     }
 
     @NonNull

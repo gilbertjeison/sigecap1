@@ -49,7 +49,6 @@ public class CapacitacionesFragment extends Fragment{
         mViewModel = ViewModelProviders.of(this).get(CapacitacionesViewModel.class);
         // TODO: Use the ViewModel
 
-
     }
 
     @OnClick(R.id.fab_add_cap)

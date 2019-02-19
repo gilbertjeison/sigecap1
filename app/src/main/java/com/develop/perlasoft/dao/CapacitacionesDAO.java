@@ -15,11 +15,15 @@ import io.reactivex.Single;
 @Dao
 public interface CapacitacionesDAO {
 
-    @Query("SELECT c.id,c.nombre_seminario,c.temas,c.hora_fin - c.hora_inicio duracion,count(cc.id) " +
-            "from capacitaciones c " +
-            "INNER JOIN capacitaciones_cargos cc on c.id = cc.id_capacitacion " +
-            "INNER JOIN tipos_data d on d.id = cc.id_cargo " +
-            "order by date(c.fecha)")
+    @Query("SELECT c.id,c.nombre_seminario nombre,c.temas,c.hora_fin - c.hora_inicio duracion,c.fecha,            \n" +
+            "           (SELECT count(a.id) from asistentes a inner join capacitaciones_cargos cc on a.id_cargo = cc.id_cargo) asistentes             \n" +
+            "            from capacitaciones c \n" +
+            "            INNER JOIN capacitaciones_cargos cc \n" +
+            "            on c.id = cc.id_capacitacion \n" +
+            "            inner join tipos_data td\n" +
+            "            on cc.id_cargo = td.id            \n" +
+            "            group by c.id\n" +
+            "            order by date(c.fecha)")
     Observable<List<CapacitacionesData>> getCapacitaciones();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

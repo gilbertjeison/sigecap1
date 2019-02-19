@@ -6,4 +6,5 @@ public class CapacitacionesData {
     public String temas;
     public int duracion;
     public int asistentes;
+    public String fecha;
 }

@@ -46,7 +46,7 @@ public class CapacitacionesFragment extends Fragment implements CapacitacionesAd
     FloatingActionButton fabAddCap;
     @BindView(R.id.recCapacitaciones)
     RecyclerView recyclerView;
-    @BindView(R.id.empty_view)
+    @BindView(R.id.empty_viewc)
     TextView txtNoData;
     private String TAG = CapacitacionesFragment.class.getSimpleName();
     private List<CapacitacionesData> listCap;

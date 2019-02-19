@@ -75,7 +75,7 @@ public class AsistentesFragment extends Fragment implements View.OnClickListener
     FloatingActionButton fab_add;
     @BindView(R.id.fab_import)
     FloatingActionButton fab_import;
-    @BindView(R.id.empty_view)
+    @BindView(R.id.empty_viewa)
     TextView txtNoData;
     @BindView(R.id.fabMenuAsistentes)
     FloatingActionMenu fabMenu;

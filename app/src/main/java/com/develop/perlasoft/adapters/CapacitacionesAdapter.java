@@ -69,7 +69,7 @@ public class CapacitacionesAdapter extends RecyclerView.Adapter<CapacitacionesAd
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.list_asistentes_item, parent, false);
+                .inflate(R.layout.list_capacitaciones_item, parent, false);
 
         return new MyViewHolder(itemView);
     }
@@ -80,8 +80,9 @@ public class CapacitacionesAdapter extends RecyclerView.Adapter<CapacitacionesAd
 
         holder.txtNombre.setText(cdata.nombre);
         holder.txtTemas.setText("TEMAS: "+cdata.temas);
-        holder.txtDuracion.setText(cdata.duracion);
-        holder.txtAsistentes.setText(cdata.asistentes);
+        holder.txtDuracion.setText(cdata.duracion+"");
+        holder.txtAsistentes.setText(cdata.asistentes+"");
+
     }
 
     @Override

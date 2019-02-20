@@ -15,7 +15,7 @@ import io.reactivex.Single;
 @Dao
 public interface CapacitacionesDAO {
 
-    @Query("SELECT c.id,c.nombre_seminario nombre,c.temas,c.hora_fin - c.hora_inicio duracion,c.fecha,            \n" +
+    @Query("SELECT c.id,c.nombre_seminario nombre,c.temas,c.hora_fin hora_fin,c.hora_inicio hora_inicio,c.fecha,            \n" +
             "           (SELECT count(a.id) from asistentes a inner join capacitaciones_cargos cc on a.id_cargo = cc.id_cargo) asistentes             \n" +
             "            from capacitaciones c \n" +
             "            INNER JOIN capacitaciones_cargos cc \n" +

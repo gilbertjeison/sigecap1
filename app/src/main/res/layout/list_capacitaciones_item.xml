@@ -28,22 +28,41 @@
         android:textColor="@color/item_name"
         android:textSize="17dp" />
 
-    <TextView
-        android:id="@+id/txtTemas"
+    <LinearLayout
+        android:id="@+id/ll0"
+        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtNameItem"
-        android:layout_marginTop="5dp"
-        android:layout_toRightOf="@id/thumbnail"
-        android:textColor="@color/description"
-        android:textSize="12sp" />
+        android:layout_below="@+id/txtNameItem"
+        android:layout_marginLeft="105dp">
+        <TextView
+            android:id="@+id/txtTms"
+            android:text="TEMAS: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/thumbnail"
+            android:textColor="@color/description"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtTemas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/txtTemas"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/ll1"
         android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtTemas"
+        android:layout_below="@+id/ll0"
         android:layout_marginLeft="105dp">
         <TextView
             android:id="@+id/txtphAr"
@@ -61,6 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_toRightOf="@id/txtphAr"
+            android:layout_marginLeft="10dp"
             android:textColor="@color/colorAccent"
             android:textStyle="bold" />
     </LinearLayout>

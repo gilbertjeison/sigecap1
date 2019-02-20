@@ -79,8 +79,8 @@ public class CapacitacionesAdapter extends RecyclerView.Adapter<CapacitacionesAd
         final CapacitacionesData cdata = list.get(position);
 
         holder.txtNombre.setText(cdata.nombre);
-        holder.txtTemas.setText("TEMAS: "+cdata.temas);
-        holder.txtDuracion.setText(cdata.duracion+"");
+        holder.txtTemas.setText(cdata.temas);
+        holder.txtDuracion.setText(cdata.duracion+" minutos");
         holder.txtAsistentes.setText(cdata.asistentes+"");
 
     }

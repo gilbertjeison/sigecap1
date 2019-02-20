@@ -17,8 +17,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
+import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.functions.Function;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 
@@ -30,6 +32,7 @@ import android.widget.Toast;
 
 import com.develop.perlasoft.adapters.CapacitacionesAdapter;
 import com.develop.perlasoft.application.SigecapApplication;
+import com.develop.perlasoft.entities.Capacitaciones;
 import com.develop.perlasoft.model.CapacitacionesData;
 import com.develop.perlasoft.viewmodels.CapacitacionesViewModel;
 import com.github.clans.fab.FloatingActionButton;
@@ -76,6 +79,7 @@ public class CapacitacionesFragment extends Fragment implements CapacitacionesAd
         recyclerView.setAdapter(capAdapter);
 
         mDisposable.add(mViewModel.getCapacitaciones()
+                .flatMap(list -> getSubdetails(list))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(new DisposableObserver<List<CapacitacionesData>>(){
@@ -106,6 +110,19 @@ public class CapacitacionesFragment extends Fragment implements CapacitacionesAd
                     }
                 }));
     }
+    private static Observable<List<CapacitacionesData>> getSubdetails(List<CapacitacionesData> cd) {
+
+        return Observable.fromCallable(() -> {
+            for (CapacitacionesData c: cd)
+            {
+                long difference = c.hora_fin.getMinutes() - c.hora_inicio.getMinutes();
+                c.duracion = Integer.parseInt(String.valueOf(difference));
+
+            }
+           return  cd;
+        });
+    }
+
 
     @OnClick(R.id.fab_add_cap)
     void pruebaClick (View view){
